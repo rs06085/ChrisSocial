@@ -81,7 +81,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FQK-qj-iek">
-                                <rect key="frame" x="41" y="420" width="293" height="128"/>
+                                <rect key="frame" x="41" y="422" width="293" height="128"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IOC-G1-XxD" customClass="FancyField" customModule="ChrisSocial" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="293" height="30"/>
@@ -108,16 +108,26 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DUY-aj-XGy">
+                                <rect key="frame" x="16" y="400" width="343" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="09O-Oa-0VG"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="FQK-qj-iek" firstAttribute="top" secondItem="13n-Ps-i6M" secondAttribute="bottom" constant="40" id="0Oc-Jf-Hja"/>
+                            <constraint firstItem="FQK-qj-iek" firstAttribute="top" secondItem="13n-Ps-i6M" secondAttribute="bottom" constant="42" id="0Oc-Jf-Hja"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="e4T-xl-Hi2" secondAttribute="bottom" id="3BB-jA-I10"/>
                             <constraint firstAttribute="trailing" secondItem="Awl-j7-Mj8" secondAttribute="trailing" id="5Ha-3Z-SXX"/>
                             <constraint firstItem="FQK-qj-iek" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5b5-tf-Hk8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DUY-aj-XGy" secondAttribute="trailing" id="7tu-an-569"/>
+                            <constraint firstItem="DUY-aj-XGy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="EgB-UL-Neq"/>
                             <constraint firstItem="Awl-j7-Mj8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FaM-y8-OLV"/>
                             <constraint firstItem="e4T-xl-Hi2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="H1z-I7-j06"/>
                             <constraint firstItem="FQK-qj-iek" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="Ih9-YC-rNR"/>
+                            <constraint firstItem="DUY-aj-XGy" firstAttribute="top" secondItem="13n-Ps-i6M" secondAttribute="bottom" constant="20" id="Nx7-HA-ryv"/>
                             <constraint firstAttribute="trailing" secondItem="e4T-xl-Hi2" secondAttribute="trailing" id="UP6-Sy-dvD"/>
                             <constraint firstItem="13n-Ps-i6M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VbE-Z6-MtD"/>
                             <constraint firstItem="iAh-ho-7wf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XxS-Vq-sd8"/>
@@ -131,11 +141,47 @@
                     <connections>
                         <outlet property="emailField" destination="IOC-G1-XxD" id="o8e-j5-9V8"/>
                         <outlet property="pwdField" destination="jBV-SG-5eN" id="GND-3l-D5d"/>
+                        <segue destination="DoT-7m-kwc" kind="show" identifier="goToFeed" id="Gpy-S6-zKy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="60.719640179910051"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="tQi-G8-liC">
+            <objects>
+                <viewController id="DoT-7m-kwc" customClass="FeedVC" customModule="ChrisSocial" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jp8-aQ-chh"/>
+                        <viewControllerLayoutGuide type="bottom" id="KpA-gp-YxI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="He3-fp-pLg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iN-gI-Onq">
+                                <rect key="frame" x="147.5" y="313" width="80" height="40"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutBtnPressed:" destination="DoT-7m-kwc" eventType="touchUpInside" id="eQA-UT-WqS"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="yMR-Ou-EH4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6iN-gI-Onq" firstAttribute="centerY" secondItem="He3-fp-pLg" secondAttribute="centerY" id="5XK-qB-Gab"/>
+                            <constraint firstItem="6iN-gI-Onq" firstAttribute="centerX" secondItem="He3-fp-pLg" secondAttribute="centerX" id="5eR-is-SZB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aza-3j-xhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="744.79999999999995" y="60.719640179910051"/>
         </scene>
     </scenes>
     <resources>
