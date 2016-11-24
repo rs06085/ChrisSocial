@@ -19,6 +19,7 @@
 		3DC754A41DE46E5E000A6EDF /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC754A31DE46E5E000A6EDF /* FancyField.swift */; };
 		3DC754A61DE470AC000A6EDF /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC754A51DE470AC000A6EDF /* FancyBtn.swift */; };
 		3DC754A91DE4A7E3000A6EDF /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC754A81DE4A7E3000A6EDF /* FeedVC.swift */; };
+		3DC754AB1DE5C333000A6EDF /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC754AA1DE5C333000A6EDF /* CircleImageView.swift */; };
 		62F71C964A6F082F3671A9FA /* Pods_ChrisSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A362330EFDFFAFB40B3D822C /* Pods_ChrisSocial.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		3DC754A51DE470AC000A6EDF /* FancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
 		3DC754A71DE484B2000A6EDF /* ChrisSocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChrisSocial.entitlements; sourceTree = "<group>"; };
 		3DC754A81DE4A7E3000A6EDF /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		3DC754AA1DE5C333000A6EDF /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		7178A7CD5719EBDA210D3740 /* Pods-ChrisSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChrisSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChrisSocial/Pods-ChrisSocial.release.xcconfig"; sourceTree = "<group>"; };
 		A362330EFDFFAFB40B3D822C /* Pods_ChrisSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChrisSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -105,6 +107,7 @@
 				3DC754A11DE4667A000A6EDF /* RoundBtn.swift */,
 				3DC754A31DE46E5E000A6EDF /* FancyField.swift */,
 				3DC754A51DE470AC000A6EDF /* FancyBtn.swift */,
+				3DC754AA1DE5C333000A6EDF /* CircleImageView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DC754A41DE46E5E000A6EDF /* FancyField.swift in Sources */,
+				3DC754AB1DE5C333000A6EDF /* CircleImageView.swift in Sources */,
 				3DC754881DE43F16000A6EDF /* SignInVC.swift in Sources */,
 				3DC754A21DE4667A000A6EDF /* RoundBtn.swift in Sources */,
 				3DC754861DE43F16000A6EDF /* AppDelegate.swift in Sources */,
