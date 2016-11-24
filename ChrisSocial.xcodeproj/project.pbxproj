@@ -20,6 +20,8 @@
 		3DC754A61DE470AC000A6EDF /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC754A51DE470AC000A6EDF /* FancyBtn.swift */; };
 		3DC754A91DE4A7E3000A6EDF /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC754A81DE4A7E3000A6EDF /* FeedVC.swift */; };
 		3DC754AB1DE5C333000A6EDF /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC754AA1DE5C333000A6EDF /* CircleImageView.swift */; };
+		3DC754AD1DE700BB000A6EDF /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC754AC1DE700BB000A6EDF /* PostCell.swift */; };
+		3DC754B01DE71845000A6EDF /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC754AF1DE71845000A6EDF /* DataService.swift */; };
 		62F71C964A6F082F3671A9FA /* Pods_ChrisSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A362330EFDFFAFB40B3D822C /* Pods_ChrisSocial.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		3DC754A71DE484B2000A6EDF /* ChrisSocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChrisSocial.entitlements; sourceTree = "<group>"; };
 		3DC754A81DE4A7E3000A6EDF /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		3DC754AA1DE5C333000A6EDF /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		3DC754AC1DE700BB000A6EDF /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		3DC754AF1DE71845000A6EDF /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		7178A7CD5719EBDA210D3740 /* Pods-ChrisSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChrisSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChrisSocial/Pods-ChrisSocial.release.xcconfig"; sourceTree = "<group>"; };
 		A362330EFDFFAFB40B3D822C /* Pods_ChrisSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChrisSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,6 +82,7 @@
 		3DC754841DE43F16000A6EDF /* ChrisSocial */ = {
 			isa = PBXGroup;
 			children = (
+				3DC754AE1DE71837000A6EDF /* Services */,
 				3DC754A71DE484B2000A6EDF /* ChrisSocial.entitlements */,
 				3DC7549E1DE45F3D000A6EDF /* Util */,
 				3DC754991DE44342000A6EDF /* Model */,
@@ -108,6 +113,7 @@
 				3DC754A31DE46E5E000A6EDF /* FancyField.swift */,
 				3DC754A51DE470AC000A6EDF /* FancyBtn.swift */,
 				3DC754AA1DE5C333000A6EDF /* CircleImageView.swift */,
+				3DC754AC1DE700BB000A6EDF /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -127,6 +133,14 @@
 				3DC7549F1DE45F51000A6EDF /* Constants.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		3DC754AE1DE71837000A6EDF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3DC754AF1DE71845000A6EDF /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		492D71FCE1F75BDAAD5E110A /* Pods */ = {
@@ -281,10 +295,12 @@
 				3DC754881DE43F16000A6EDF /* SignInVC.swift in Sources */,
 				3DC754A21DE4667A000A6EDF /* RoundBtn.swift in Sources */,
 				3DC754861DE43F16000A6EDF /* AppDelegate.swift in Sources */,
+				3DC754B01DE71845000A6EDF /* DataService.swift in Sources */,
 				3DC754A91DE4A7E3000A6EDF /* FeedVC.swift in Sources */,
 				3DC7549D1DE45C79000A6EDF /* FancyView.swift in Sources */,
 				3DC754A01DE45F51000A6EDF /* Constants.swift in Sources */,
 				3DC754A61DE470AC000A6EDF /* FancyBtn.swift in Sources */,
+				3DC754AD1DE700BB000A6EDF /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
