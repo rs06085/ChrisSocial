@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChrisSocial/FeedVC.swift"
-            timestampString = "501767188.505335"
+            timestampString = "501768718.624646"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "signOutBtnPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
