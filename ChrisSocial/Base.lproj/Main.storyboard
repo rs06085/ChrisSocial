@@ -203,13 +203,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KqL-07-wAm">
                                         <rect key="frame" x="8" y="8" width="327" height="49"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="P9b-kk-kQI" customClass="CircleImageView" customModule="ChrisSocial" customModuleProvider="target">
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="P9b-kk-kQI" customClass="CircleImageView" customModule="ChrisSocial" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="49"/>
                                                 <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="9WG-4Q-b1V"/>
                                                     <constraint firstAttribute="height" constant="50" id="Bu4-Vv-SV9"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="9tl-dN-PT2" appends="YES" id="Rav-HS-hzk"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add a caption" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qK4-wL-TH6" customClass="FancyField" customModule="ChrisSocial" customModuleProvider="target">
                                                 <rect key="frame" x="60" y="0.0" width="207" height="49"/>
@@ -377,10 +381,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageAdd" destination="P9b-kk-kQI" id="IMA-ej-Axb"/>
                         <outlet property="tableView" destination="3Li-c9-eYb" id="XKP-PW-cl5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aza-3j-xhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9tl-dN-PT2">
+                    <connections>
+                        <action selector="addImagePressed:" destination="DoT-7m-kwc" id="Jou-qQ-pLo"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="744.79999999999995" y="60.719640179910051"/>
         </scene>
