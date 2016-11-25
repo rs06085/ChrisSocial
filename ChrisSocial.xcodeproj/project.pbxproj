@@ -22,6 +22,7 @@
 		3DC754AB1DE5C333000A6EDF /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC754AA1DE5C333000A6EDF /* CircleImageView.swift */; };
 		3DC754AD1DE700BB000A6EDF /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC754AC1DE700BB000A6EDF /* PostCell.swift */; };
 		3DC754B01DE71845000A6EDF /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC754AF1DE71845000A6EDF /* DataService.swift */; };
+		3DC754B21DE73F3E000A6EDF /* FancyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC754B11DE73F3E000A6EDF /* FancyImageView.swift */; };
 		62F71C964A6F082F3671A9FA /* Pods_ChrisSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A362330EFDFFAFB40B3D822C /* Pods_ChrisSocial.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		3DC754AA1DE5C333000A6EDF /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		3DC754AC1DE700BB000A6EDF /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		3DC754AF1DE71845000A6EDF /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		3DC754B11DE73F3E000A6EDF /* FancyImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyImageView.swift; sourceTree = "<group>"; };
 		7178A7CD5719EBDA210D3740 /* Pods-ChrisSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChrisSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChrisSocial/Pods-ChrisSocial.release.xcconfig"; sourceTree = "<group>"; };
 		A362330EFDFFAFB40B3D822C /* Pods_ChrisSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChrisSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 				3DC754A51DE470AC000A6EDF /* FancyBtn.swift */,
 				3DC754AA1DE5C333000A6EDF /* CircleImageView.swift */,
 				3DC754AC1DE700BB000A6EDF /* PostCell.swift */,
+				3DC754B11DE73F3E000A6EDF /* FancyImageView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			files = (
 				3DC754A41DE46E5E000A6EDF /* FancyField.swift in Sources */,
 				3DC754AB1DE5C333000A6EDF /* CircleImageView.swift in Sources */,
+				3DC754B21DE73F3E000A6EDF /* FancyImageView.swift in Sources */,
 				3DC754881DE43F16000A6EDF /* SignInVC.swift in Sources */,
 				3DC754A21DE4667A000A6EDF /* RoundBtn.swift in Sources */,
 				3DC754861DE43F16000A6EDF /* AppDelegate.swift in Sources */,
