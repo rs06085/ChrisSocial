@@ -12,10 +12,13 @@ import SwiftKeychainWrapper
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var captionField: FancyField!
     @IBOutlet weak var imageAdd: CircleImageView!
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
+    var imageSelected = false
+    
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
 
     @IBOutlet weak var tableView: UITableView!
@@ -74,6 +77,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             imageAdd.image = image
+            imageSelected = true
         } else {
             print("CHRIS: A valid image was not eslected")
         }
@@ -84,6 +88,36 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         present(imagePicker, animated: true, completion: nil)
     }
+    
+    @IBAction func postBtnPressed(_ sender: Any) {
+        
+        guard let caption = captionField.text, caption != "" else {
+            print("CHRIS: Caption must be entered")
+            return
+        }
+        guard let img = imageAdd.image, imageSelected == true else {
+            print("CHRIS: Image must be selected")
+            return
+        }
+        
+        if let imgData = UIImageJPEGRepresentation(img, 0.2) {
+            
+            let imgUid = NSUUID().uuidString
+            let metaData = FIRStorageMetadata()
+            metaData.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POST_IMAGES.child(imgUid).put(imgData, metadata: metaData) { (metaData, error) in
+                if error != nil {
+                    print("CHRIS: Unable to upload image to Firebase storage")
+                } else {
+                    print("CHRIS: Successfully uploaded image to Firebase storage")
+                    let downloadURL = metaData?.downloadURL()?.absoluteString
+                }
+            }
+        }
+        
+    }
+    
     
     @IBAction func signOutBtnPressed(_ sender: Any) {
         let keychainResult = KeychainWrapper.standard.removeAllKeys()
